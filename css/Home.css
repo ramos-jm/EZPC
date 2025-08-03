@@ -1,0 +1,272 @@
+body {
+    background-color: black;
+    color: var(--text-color);
+    padding-top: var(--nav-height);
+    min-height: 100%;
+
+}
+
+
+.main {
+    /*background: #373749;*/
+    background: rgb(0, 0, 0);
+    background: linear-gradient(326deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    width: inherit;
+    text-shadow: 1px 1px 3px black;
+}
+
+.container {
+    position: relative;
+   margin-top: 120px;
+  }
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+  
+Home_Container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Home_Gif > img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px black;
+}
+.Home_Gif {
+    z-index: 1;
+}
+.gif3 > img {
+    margin-left: -10%;
+    width: 110%;
+}
+.gif4 > img {
+    margin-left: -10%;
+    width: 115%;
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    padding: 0 20%;
+}
+.card-title {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 2.1rem;
+}
+p, a {
+    font-size: 16px;
+    text-shadow: 1px 1px 2px black;
+}
+.front > a {
+    color: #b2b2ff;
+    text-decoration: none;
+}
+.image {
+    position: absolute;
+    width: 100%;
+    top: .5rem;
+    left: .5rem;
+}
+.front {
+    z-index: 3;
+    position: absolute;
+    margin: 1rem;
+    width: 35%;
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgba(112, 112, 112, 0.54);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(8px);
+}
+
+
+.back {
+    z-index: 2;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.5s;
+
+    width: 150px;
+    height: 350px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+}
+.front:hover ~ .back{
+    transition: 0.5s;
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+}
+
+
+.gallery {
+    grid-area: gallery;
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.7em;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em;
+}
+
+.item > p {
+    margin-top: 1em;
+}
+
+.label2 {
+    margin-left: -8%;
+}
+
+.label4 {
+    margin-left: -8%;
+}
+
+/* ---- Custom Scrollbar-- */
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+::-webkit-scrollbar-track{
+    background:#000000;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#020135, #494450);
+    border-radius: 26px;
+    height: 12%;
+
+}
+
+
+@media (max-width: 981px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 3em;
+    }
+
+    .Home_Gif {
+        position: absolute;
+    }
+
+    .front {
+        width: 70%;
+    }
+
+    .label2 {
+        margin-left: 6%;
+    }
+
+    .label4 {
+        margin-left: 6%;
+    }
+
+    .item {
+        margin: 6em 2em;
+    }
+
+    .gif3 > img {
+        width: 120%;
+    }
+    .gif4 > img {
+        margin-left: -12%;
+        width: 125%;
+    }
+}
+
+
+.square1 {
+    position: absolute;
+    width: 10px;
+    top: 14%;
+    right: 15%;
+    animation: login-square1 60s linear infinite alternate;
+}
+@keyframes login-square1 {
+    from{
+        height: 1%;
+    }
+    50% {
+        height: 198%;
+    }
+    to{
+        height: 1%;
+    }
+}
+
+.square2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    animation: login-square2 15s linear infinite alternate;
+}
+@keyframes login-square2 {
+    from{
+        top: 14%;
+        left: 9%;
+    }
+    50%{
+        top: 67%;
+        left: 9%;
+    }
+    to{
+        top: 67%;
+        left: 35.7%;
+    }
+}
+
+.square3 {
+    position: absolute;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    top: 175.5%;
+    left: 39.8%;
+    animation: login-square3 15s linear infinite alternate;
+}
+@keyframes login-square3 {
+    from{
+        top: 175.5%;
+        left: 80.5%;
+    }
+    70%{
+        top: 175.5%;
+        left: 39.8%;
+    }
+    to{
+        top: 134.5%;
+        left: 39.8%;
+    }
+}
+
+.square1, .square2, .square3 {
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(185, 49, 126, 0.34);
+}
