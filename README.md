@@ -32,7 +32,7 @@ It is designed using **HTML, CSS, JavaScript, PHP, and SQL** to handle real-time
 |--------------|------------|
 | Frontend     | HTML, CSS, JavaScript |
 | Backend      | PHP |
-| Database     | MySQL / MariaDB |
+| Database     | MySQL |
 | Version Control | Git & GitHub |
 
 ---
